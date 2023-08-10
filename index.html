@@ -1,98 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Calculator</title>
-<style>
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.calculator {
-  width: 300px;
-  margin: 0 auto;
-}
-
-.calculator .display {
-  width: 100%;
-  height: 20px;
-  border: 1px solid #ccc;
-  padding: 5px;
-  font-size: 18px;
-}
-
-.calculator button {
-  width: 40px;
-  height: 40px;
-  border: none;
-  background-color: #ccc;
-  color: #fff;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.calculator button:hover {
-  background-color: #bbb;
-}
-
-.calculator button.operator {
-  width: 80px;
-}
-
-.calculator button.scientific {
-  background-color: #666;
-  color: #fff;
-}
-</style>
-</head>
-<body>
-<div class="calculator">
-  <div class="display"></div>
-  <button onclick="display('0')">0</button>
-  <button onclick="display('1')">1</button>
-  <button onclick="display('2')">2</button>
-  <button onclick="display('3')">3</button>
-  <button onclick="display('4')">4</button>
-  <button onclick="display('5')">5</button>
-  <button onclick="display('6')">6</button>
-  <button onclick="display('7')">7</button>
-  <button onclick="display('8')">8</button>
-  <button onclick="display('9')">9</button>
-  <button class="operator" onclick="calculate('+')">+</button>
-  <button class="operator" onclick="calculate('-')">-</button>
-  <button class="operator" onclick="calculate('*')">*</button>
-  <button class="operator" onclick="calculate('÷')">÷</button>
-  <button class="operator scientific" onclick="calculate('√')">√</button>
-  <button class="operator scientific" onclick="calculate('^')">^</button>
-  <button class="operator scientific" onclick="calculate('π')">π</button>
-  <button onclick="clear()">C</button>
-  <button onclick="calculate()">=</button>
-</div>
-<script>
-function display(value) {
-  var display = document.querySelector('.display');
-  display.value += value;
-}
-
-function calculate(operator) {
-  var expression = document.querySelector('.display').value;
-  var result = eval(expression + operator);
-  display.value = result;
-}
-
-function clear() {
-  var display = document.querySelector('.display');
-  display.value = '';
-}
-
-function scientificCalculation(operator) {
-  var expression = document.querySelector('.display').value;
-  var result = eval('(' + expression + ') ' + operator);
-  display.value = result;
-}
-
-document.querySelector('.operator.scientific').onclick = scientificCalculation;
-</script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="icon"
+      href="https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_64-1024.png"
+      sizes="16*16"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <script src="/script.js"></script>
+  </body>
 </html>
