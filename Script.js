@@ -3,7 +3,7 @@ info.className = 'container';
 
 info.innerHTML = `
 <div class="calculator">
-    <h2 class="text-center">Calculator</h2>
+    <h2 class="text-center"><a href="https://github.com/hsarvesh/cal">Calculator</a></h2>
     <input type="text" placeholder="0" a = "onkeydown(z)" id="result">
     <button onclick="cle()">C</button>
     <button onclick="del()">DEL</button>
